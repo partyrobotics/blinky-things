@@ -10,14 +10,17 @@ program: $(TARGET).hex
 $(TARGET).hex: $(TARGET).obj 
 	$(OBJ2HEX) -R .eeprom -O ihex $< $@
 
-$(TARGET).obj: xmas_lib.o main.o
-	$(CC) $(CFLAGS) -o $@ -Wl,-Map,$(TARGET).map $?
+$(TARGET).obj: xmas_lib.o main.o fbuffer.o
+	$(CC) $(CFLAGS) -o $@ -Wl,-Map,$(TARGET).map $^
 
-xmas_lib.obj: xmas_lib.c  xmas_lib.h
-	$(CC) $(CFLAGS) -o xmas_lib.o xmas_lib.c
+xmas_lib.o: xmas_lib.c  xmas_lib.h
+	$(CC) -c $(CFLAGS) -o xmas_lib.o xmas_lib.c
 
-main.obj: main.c
-	$(CC) $(CFLAGS) -o main.o main.c
+main.o: main.c
+	$(CC) -c $(CFLAGS) -o main.o main.c
+
+fbuffer.o: fbuffer.c fbuffer.h
+	$(CC) -c $(CFLAGS) -o fbuffer.o fbuffer.c
 
 clean:
 	rm -f *.hex *.obj *.o *.map

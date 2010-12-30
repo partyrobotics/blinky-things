@@ -88,3 +88,32 @@ update_now_playing()
         xmas_set_color(0,XMAS_DEFAULT_INTENSITY/2-c,color);
     }
 }
+
+void random_with_blue_cursor(void)
+{
+    while(!stop()) 
+    {
+        int  i, c, t;
+
+        for(i = 0; i < 50 && !stop(); i++)
+        {
+            for(c = 0; c < 2; c++)
+            {    
+                for(t = 0; t < XMAS_DEFAULT_INTENSITY; t++)
+                {    
+                    xmas_set_color(i, t, XMAS_COLOR_BLUE);
+                    _delay_us(200);
+                }
+                for(t = XMAS_DEFAULT_INTENSITY; t > 0; t--)
+                {    
+                    xmas_set_color(i, t, XMAS_COLOR_BLUE);
+                    _delay_us(200);
+                }
+            }
+            xmas_set_color(i, 0xCC, XMAS_COLOR((random() % XMAS_CHANNEL_MAX) * (random() % 3 ? 1 : 0), 
+                                               (random() % XMAS_CHANNEL_MAX) * (random() % 3 ? 1 : 0), 
+                                               (random() % XMAS_CHANNEL_MAX) * (random() % 3 ? 1 : 0)));
+            _delay_ms(100);
+        }
+    }
+}

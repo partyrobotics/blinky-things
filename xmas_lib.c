@@ -106,5 +106,6 @@ xmas_color_hue(uint8_t h) {
         case 4: h-=64; return xmas_color(0,h,XMAS_CHANNEL_MAX);
         case 5: h-=80; return xmas_color(0,XMAS_CHANNEL_MAX,(XMAS_CHANNEL_MAX-h));
     }
+    return xmas_color(0,0,0);
 }
 
