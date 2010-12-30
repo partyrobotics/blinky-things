@@ -1,3 +1,7 @@
+// 
+// Copyright (c) Party Robotics LLC 2010
+// Written by Robert Kaye <rob@partyrobotics.com>
+//
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>

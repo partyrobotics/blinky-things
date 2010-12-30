@@ -1,3 +1,7 @@
+// 
+// Copyright (c) Party Robotics LLC 2010
+// Written by Robert Kaye <rob@partyrobotics.com>
+//
 #ifndef __FBUFFER_H__
 #define __FBUFFER_H__
 

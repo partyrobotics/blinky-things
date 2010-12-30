@@ -1,0 +1,9 @@
+This is the firmware to the Chandelier
+
+Written by Robert Kaye
+Copyright (c) Party Robotics 2010
+All Rights Reserved.
+
+Notes:
+   xmas_lib.c, xmas_lib.h and stock_patterns.h are NOT copyright Party Robotics and the use of these modules
+   isn't entirely clear. TODO: Fix this.

@@ -1,3 +1,13 @@
+/*!	Christmas Light Control Header
+**	By Robert Quattlebaum <darco@deepdarc.com>
+**	Released November 27th, 2010
+**
+**	For more information,
+**	see <http://www.deepdarc.com/2010/11/27/hacking-christmas-lights/>.
+**
+**	Originally intended for the ATTiny13, but should
+**	be easily portable to other microcontrollers.
+*/
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
