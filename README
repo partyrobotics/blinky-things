@@ -1,9 +1,8 @@
-This is the firmware to the Chandelier
+This repository contains all the firmware for the blink-shit division of Partyrobotics.
 
 Written by Robert Kaye
 Copyright (c) Party Robotics 2010
 All Rights Reserved.
 
-Notes:
-   xmas_lib.c, xmas_lib.h and stock_patterns.h are NOT copyright Party Robotics and the use of these modules
-   isn't entirely clear. TODO: Fix this.
+chandelier: Firmware for the chandelier
+necklace: Firmware for Carol's "Fuck me" necklace
